@@ -1,0 +1,412 @@
+//paragraf
+Elemen paling mendasar dari sebuah dokumen teks. Pada HTML, kita bisa menunjukan sebuah pragraf dengan menggunakan elemen pada
+
+<p>
+  Kata Bandung berasal dari kata bendung atau bendungan karena terbendungnya sungai Citarum oleh lava Gunung Tangkuban Parahu yang lalu membentuk telaga...
+</p>
+
+//Heading
+Berfungsi sebagi judul beserta sub subnya
+
+//list
+Ada 3 tipe list 
+1. Unordered lists = tidak berurutan atau
+2. Ordered list = daftar yang ditampilkan secara terurut
+3. Description lists = daftar yang terbuat dari beberapa istilah diikuti dengan deskripsi dari istilah tersebut
+
+
+1. Unordered list = pakai <ul></ul>, di dalamnya baru pake <li></li>
+Contoh :
+<ul>
+  <li>Item 1</li>
+  <li>Item 2</li>
+  <li>Item 3</li>
+  <li>Item 4</li>
+</ul>
+
+Bisa juga nyisipin elemn lain didalamnya
+
+<ul>
+  <li><h1>Sebuah Heading sebagai item list</h1></li>
+  <li><h2>Sebuah Heading level 2 sebagai item list</h2></li>
+  <li><p>Sebuah paragraf sebagai item list</p></li>
+</ul>
+
+Didalme <li></li> juga bisa nyisipin lagi <ul></ul>
+
+<ul>
+  <li>List item 1</li>
+  <li>List item 2</li>
+  <li>
+    List item 3
+    <ul>
+      <li>List item 3.1</li>
+      <li>List item 3.2</li>
+      <li>List item 3.3</li>
+    </ul>
+  </li>
+  <li>List item 4</li>
+</ul>
+
+=======================================================================
+
+2. Ordered list = pake <ol></ol> terus dalemannya sama pakai <li></li> juga
+
+contoh : 
+
+<ol>
+  <li>Langkah pertama</li>
+  <li>Langkah kedua</li>
+  <li>Langkah ketiga</li>
+  <li>Langkah selanjutnya</li>
+</ol>
+
+Kalau pakai attribut "type" bisa ngubah urutannya, contoh 
+
+<ol type="I">
+  <li>Langkah pertama</li>
+  <li>Langkah kedua</li>
+  <li>Langkah ketiga</li>
+  <li>Langkah selanjutnya</li>
+</ol>
+
+Berarti mualainya dari angka romawi
+
+Kalo pakai attribut start, bisa diatur dari berapa angka yang dimau 
+
+<ol start="7">
+  <li>Langkah ketujuh</li>
+  <li>Langkah kedelapan</li>
+  <li>Langkah kesembilan</li>
+  <li>Langkah selanjutnya</li>
+</ol>
+
+Kalo pakai attribut reversed berarti mundur turun kebawah ngitungnya
+
+<ol start="7">
+  <li>Langkah ketujuh</li>
+  <li>Langkah kedelapan</li>
+  <li>Langkah kesembilan</li>
+  <li>Langkah selanjutnya</li>
+</ol>
+
+
+======================================================================
+
+//gambar
+Kalau mau masukin gambar pakai tag <img>
+
+<img
+  src="https://raw.githubusercontent.com/dicodingacademy/a123-webdasar-labs/099-shared-files/shared-media/dicoding-logo.jpg" 
+  alt="Dicoding Logo"
+>
+
+Format gambar
+- .gif 
+- .jpg, jpeg, jfif, pjpeg, pjp 
+- .png 
+- .webp 
+- .svg 
+
+//Mengatur ukuran gambar 
+
+Atur dengan nambahin attribut width atau height 
+
+<img src="https://raw.githubusercontent.com/dicodingacademy/BelajarDasarPemrogramanWeb/099-shared-files/dicoding-logo.png" alt="Logo Dicoding" height="100px">
+
+<img src="https://raw.githubusercontent.com/dicodingacademy/BelajarDasarPemrogramanWeb/099-shared-files/dicoding-logo.png" alt="Logo Dicoding" width="500px">
+
+terdapat attribut src sama alt 
+src = buat sumber gambar
+alt = beri alternatif data yang ditampilkan 
+
+========================================================================
+
+//Inline formatting text: Long Quotations, preformatted text dan figure 
+
+Spesial text format
+1. <blockquote></blockquote>
+2. <pre></pre>
+3. <figure></figure>
+
+
+1. Long Quotations (<blockquote></blockquote>)
+
+<blockquote>
+  <p>
+    Situs web (bahasa Inggris: website) adalah sekumpulan halaman web yang saling berhubungan yang
+    umumnya berada pada peladen yang sama berisikan kumpulan informasi yang disediakan secara
+    perorangan, kelompok, atau organisasi.
+  </p>
+</blockquote>
+
+2. Preformatted text  (<pre></pre>)
+Disin spasi tidak diabaikan dan output akan keluar sesuai apa yang ditulis
+
+<pre>
+  SAJAK PUTIH
+
+Bersandar pada tari warna pelangi
+Kau depanku bertudung sutra senja
+Di hitam matamu kembang mawar dan melati
+Harum rambutmu mengalun bergelut senda
+
+Sepi menyanyi, malam dalam mendoa tiba
+Meriak muka air kolam jiwa
+Dan dalam dadaku memerdu lagu
+Menarik menari seluruh aku
+
+Hidup dari hidupku, pintu terbuka
+Selama matamu bagiku menengadah
+Selama kau darah mengalir dari luka
+Antara kita Mati datang tidak membelah...
+
+                  Karya: Chairil Anwar
+</pre>
+
+
+3. FIGURE 
+
+Figure diapke buat kasih caption atau kayak mempresentasikan konten tersendiri, contohnya ilustrasi, diagram, foto, atau bisa juga sebuah baris kode.
+
+contoh 
+
+
+<figure>
+  <pre>
+          SAJAK PUTIH
+
+      Bersandar pada tari warna pelangi
+      Kau depanku bertudung sutra senja
+      Di hitam matamu kembang mawar dan melati
+      Harum rambutmu mengalun bergelut senda
+
+      Sepi menyanyi, malam dalam mendoa tiba
+      Meriak muka air kolam jiwa
+      Dan dalam dadaku memerdu lagu
+      Menarik menari seluruh aku
+
+      Hidup dari hidupku, pintu terbuka
+      Selama matamu bagiku menengadah
+      Selama kau darah mengalir dari luka
+      Antara kita Mati datang tidak membelah...
+  </pre>
+  <figcaption>Sajak Putih oleh Charil Anwar</figcaption>
+</figure>
+
+CONTOH LAIN DARI FIGURE
+
+<p>
+  Dicoding adalah sebuah perusahaan startup yang bertujuan mengembangkan ekosistem developer di
+  Indonesia. Berdiri sejak 5 Januari 2015, Dicoding memiliki platform pembelajaran elektronik di
+  laman Dicoding.com.
+</p>
+
+<figure>
+  <img
+    src="https://raw.githubusercontent.com/dicodingacademy/a123-webdasar-labs/099-shared-files/shared-media/g-dicoding-logo.png"
+    alt="g Dicoding Logo"
+    width="200px"
+  />
+  <figcaption>Dicoding</figcaption>
+</figure>
+
+<p>
+  Materi perdana yang menjadi magnet dari awal berdirinya Dicoding hingga kini adalah kelas Menjadi
+  Android Developer Expert. Kelas ini dikembangkan oleh Google Developer Expert in Android, Sidiq
+  Permana dan Head of Dicoding Academy, Ahmad Imaduddin. Seperti halnya kelas Picodiploma lain,
+  modul online-nya juga hadir dalam bentuk buku berjudul sama yang telah mendapatkan ijin dan ISBN.
+</p>
+
+
+================================================================================================================================================
+
+Inline formatting text: Anchor, Emphasized Text, Important Text dn Short Quotations
+
+1. Anchor
+elemen yang digunakan untk memasukan hyperlink atau a href
+contoh
+
+<p>Hubungi kami di</p>
+<ul>
+  <li><a href="https://example.com">Website</a></li>
+  <li><a href="mailto:info@example.com">Email</a></li>
+  <li><a href="tel:+62123456">Telepon</a></li>
+  <li><a href="#address">Alamat</a></li>
+</ul>
+
+Beberapa atribut yang bisa diapke pada elemen anchor atau a: 
+
+1. download
+2. href 
+3. hreflang
+4. ping 
+5. refferrerpolicy
+6. rel
+7. target
+8. media 
+
+
+2. Emphasized text 
+
+
+pakai <em></em> buat nunjukin bagian kata yang perlu ditenkan atau italic
+
+<p><em>Oding</em> adalah seorang pelajar</p>
+<p>Dia adalah seorang <em>pelajar</em></p>
+
+3. Important Text 
+
+Gunakan elemen <strong></strong> untuk menunjukan sebauh text yang begitu penting (bold)
+<p>Kesehatan merupakan hal yang penting, jaga pola makan yang teratur dan <strong>jangan sampai makan tengah malam!</strong></p>
+
+
+4. Short Quotations
+
+Gunakan elemen <q></q> buat tanda kutip 
+<p>Sebelum pulang kerja, ia berkata kepadaku: <q>Maaf saya tidak bisa hadir dalam pertemuan nanti</q></p>
+
+================================================================================================================================================
+
+Inline Formatting Text: Citation, Defining Terms, Subscript, Superscript, Highlighted Text, dan Line Break
+
+1. Citation
+
+Selain sebuah atribut, <cite> juga merupakan sebuah elemen yang digunakan untuk sebuah rujukan pada sebuah dokumen, contohnya sebuah buku, majalah, artikel, dan lainnya.
+
+<p>Informasi selengkapnya bisa Anda dapatkan di <cite><a href="https://dicoding.com">dicoding.com</a></cite>.</p>
+
+
+2. Defining Terms
+
+Elemen <dfn> digunakan ketika mendefinisikan sebuah istilah (term). Elemen ini harus terletak pada elemen lain yang menaunginya. Contohnya pada sebuah elemen <p> atau elemen <section>. Berikut contoh penggunaannya.
+
+<p><dfn>Website</dfn> merupakan halaman yang menampilkan informasi melalui teks atau gambar. Website dapat diakses melalui internet dengan menggunakan browser.</p>
+
+
+3. Subscript dan Superscript
+
+Subscript <sub> dan superscript <sup> adalah elemen yang dapat membuat teks yang ditampilkan tampak kecil, dengan posisi di bawah (sub) atau di atas (sup) dari teks biasanya. Elemen ini digunakan untuk menunjukkan sebuah rumus kimia ataupun matematika.
+
+<p>
+  Sukrosa merupakan suatu disakarida yang dibentuk dari monomer-monomernya yang berupa unit glukosa dan fruktosa, dengan rumus molekul C<sub>12</sub>H<sub>22</sub>O<sub>11</sub>.
+</p>
+
+<p>Salah satu persamaan paling umum dalam semua fisika adalah E=MC<sup>2</sup></p>
+
+4. Highlited Text 
+
+<p>
+  Ini adalah periode perang saudara. Pesawat ruang angkasa pemberontak, menyerang dari pangkalan
+  tersembunyi, telah memenangkan kemenangan pertama mereka melawan Kekaisaran Galactic yang jahat.
+  Selama pertempuran,
+  <mark>mata-mata Pemberontak berhasil mencuri rencana rahasia </mark>
+  ke senjata pamungkas Kekaisaran, STAR DEATH, stasiun ruang angkasa berlapis baja dengan kekuatan
+  yang cukup untuk menghancurkan seluruh planet.
+</p>
+
+5. Line Break 
+
+<p>
+   Dicoding Space,<br>
+   Jln. Batik Kumeli No. 50.<br>
+   Bandung.<br>
+   40123
+</p>
+
+===========================================================================================================================================
+
+SEMANTIC HTML: MENGORGANISASI HALAMAN KONTEN
+
+<div></div> merupakan generic element yang bisa buat membungkus
+
+SEMANTIC HTML 
+
+Header dan footer
+- Header = Pengantar atau pembuka konten dalam sebauh elemen <article></article> atau <section></section>
+
+- Footer = catatan kaki pada sebuah elemen article dan footer 
+
+
+
+Main
+Element <main> digunakan untuk menampung/mewadahi konten utama (dominan) dalam <body>. Konten main dapat terdiri dari banyak section, ataupun artikel, atau konten apa pun di dalam elemen main, selama ia termasuk konten utama yang dimiliki oleh website.
+
+Nav 
+Nav
+Elemen <nav> digunakan untuk menampung sebuah navigasi yang sifatnya penting (mayor), contohnya navigasi utama pada sebuah website.
+
+Namun, tidak menjamin pada sebuah website hanya ada satu navigasi. Contohnya, sebuah akhir artikel pada blog terdapat tautan navigasi menuju artikel yang dianggap relevan dengan artikel yang telah kita baca. Navigasi tersebut tidak dianggap sebagai navigasi yang penting sehingga kita tidak perlu menggunakan elemen <nav> untuk menampilkannya.
+
+Pada pembahasan header dan footer, kita sudah melihat contoh penggunaan dari elemen <nav> yang diletakkan pada elemen <header>. 
+
+========================================================================
+
+Semantic HTML: Articles, Aside, dan Section
+
+Articles
+
+Elemen <article> bertindak sebagai container untuk independent content pada sebuah halaman, artinya konten utuh yang tidak terkait dengan konten lain, bisa saja sebuah artikel blog, komentar, forum post dan konten lainnya.
+Contoh 
+
+<article>
+  <h2>Sejarah</h2>
+  <img src="img/history.jpg">
+  <p>Kata Bandung berasal dari kata bendung atau bendungan karena terbendungnya sungai Citarum oleh lava Gunung Tangkuban Parahu yang lalu membentuk telaga...</p>
+</article>
+
+
+
+Aside
+
+Elemen <aside> memiliki dua tujuan, tergantung kita menempatkannya di dalam sebuah elemen <article> atau tidak.
+
+Ketika elemen ini ditempatkan di dalam elemen <article>, elemen ini dapat berisi informasi yang berhubungan dengan artikel tersebut, tetapi bukan bagian dari konten artikelnya itu sendiri (dipisahkan dari konten utama). 
+
+Ketika ditempatkan di luar elemen <article>, elemen ini dapat berisi informasi yang berhubungan pada keseluruhan halaman.
+
+Elemen <aside> biasanya terletak di samping dari sebuah elemen yang menampungnya. 
+
+Section
+Sebuah elemen yang memiliki kesamaan konten dan sebuah heading di dalamnya dapat dikelompokkan dengan menggunakan elemen <section>. Dengan begitu elemen ini dapat digunakan pada sebuah elemen <article> yang memiliki konten panjang dan berpotensi untuk dikelompokkan.
+
+<article>
+  <section>
+    <h2>Wisata</h2>
+    <p>
+      Sejak dibukanya Jalan Tol Cipularang, kota Bandung telah menjadi tujuan utama dalam menikmati
+      liburan akhir pekan terutama dari masyarakat yang berasal dari Jakarta sekitarnya. Selain
+      menjadi kota wisata belanja, kota Bandung juga dikenal dengan sejumlah besar bangunan lama
+      berarsitektur peninggalan Belanda.
+    </p>
+  </section>
+</article>
+
+
+======================================================================================================================================================================
+
+Generic Element
+
+Setelah mengenal beberapa elemen yang ada, bagaimana jika tidak ada elemen yang mampu menggambarkan konten kita? Dalam dunia nyata, jenis informasi sangat beragam dan mungkin tidak semua semantik elemen yang kita ketahui dapat menggambarkan jenis informasinya. Untungnya, HTML menyediakan dua tipe elemen umum (generic element) yang bisa kita kustomisasi untuk menggambarkan konten kita dengan tepat. 
+
+Ada dua generic element yang dapat kita manfaatkan. 
+
+Div
+Pertama, elemen <div>, elemen ini merupakan sebuah wadah (container) yang bersifat umum untuk menampung beberapa konten. Elemen ini tidak akan memberikan efek apa pun pada konten atau layout sebelum menerapkan sebuah style menggunakan CSS.
+
+
+
+Span
+Kedua, elemen <span>, elemen ini memberikan manfaat yang sama seperti <div>, bedanya elemen ini digunakan sebagai phrase elements dan tidak terdapat line breaks ketika menggunakannya. Sederhananya, <span> merupakan sebuah <div> yang digunakan dalam sebuah baris teks yang dapat diwadahi oleh paragraf, list, heading, atau lainnya.
+
+<style>
+  .phone {
+    font-weight: bold;
+  }
+</style>
+
+<ul>
+  <li>Agil: <span class="phone">08123xxx</span></li>
+  <li>Widy: <span class="phone">08222xxx</span></li>
+  <li>Gilang: <span class="phone">08333xxx</span></li>
+</ul>

@@ -1,0 +1,85 @@
+
+
+//elemen dalam paragraf
+<p> Ini adalah text dalam elemen paragraf </p>
+
+Susunannya =
+1. Tag pembuka
+2. Konten
+3. Tag Penutup
+
+//Elemen didalam elemen
+
+<p><strong> HTML </strong> merupakan<i> markup language </i> untuk membangun halaman web </p>
+
+
+//Attribute di elemen HTML
+
+<img src = "/lokasi/dari/berkas/gambar/anda.jpg">
+src menentukan lokasi gambar
+
+<p class="example"> ini adalah teks dalam elemen paragraf </p>
+
+class = Atribut
+atribut ini merupakan sebuah nama identitas yang digunakan untuk menargetkan elemen dengan kode styling. Untuk pembahasan styling akan dicakup pada modul terpisah.
+
+contoh attribute = 
+- class
+- accesskey
+- dir
+- hidden
+- id 
+- style
+- title 
+- tabindex 
+
+//anatomi dokumen html 
+
+HTML 
+- Head 
+    - Title 
+
+- Body 
+    - h1 
+    - p 
+
+doctype HTML 
+Sederhananya, doctype dimaksudkan sebagai format atau versi HTML dan berisi sekumpulan aturan-aturan yang perlu diikuti dalam membangun halaman web yang baik.
+
+elemen<html></html>
+berfungsi memberi tahu kalau ini loh file html 
+
+elemen <head></head>
+berfungsi sebagai tempat disimpannya informasi dari dokumen HTML Informasi dapat berupa elemen meta, style, favicon, atau link. Selain itu, kita bisa memberikan judul dari halaman web (tab browser).
+
+<title> 
+<style>
+<base>
+<link>
+<meta>
+<script>
+<noscript>
+
+<!DOCTYPE html>
+<html>
+  <meta charset="utf-8">
+  <title>Judul Halaman</title>
+  <style>
+    /* style */
+  </style>
+ 
+  <body>
+    <h1>Judul Utama</h1>
+    <p>Sebuah paragraf</p>
+  </body>
+</html>
+
+lorem generator pake word
+=lorem("angka_paragraf", "angka_kalimat_pada_setiap_paragraf")
+
+Rangkuman
+- Pengantar HTML
+- Anatomi eleemen HTML
+- Attribut eleemen HTML
+- Anatomi Dokumen HTML
+- 

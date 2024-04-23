@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form>
+      <fieldset>
+        <legend>Please select your preferred contact method:</legend>
+        <div>
+          <input type="radio" id="contactChoice1" name="contact" value="email" />
+          <label for="contactChoice1">Email</label>
+
+          <input type="radio" id="contactChoice2" name="contact" value="phone" />
+          <label for="contactChoice2">Phone</label>
+
+          <input type="radio" id="contactChoice3" name="contact" value="mail" />
+          <label for="contactChoice3">Mail</label>
+        </div>
+        <div>
+          <button type="submit">Submit</button>
+        </div>
+      </fieldset>
+    </form>
+
+    <!-- Selecting Radio Button for default -->
+    <br />
+    <form>
+      <fieldset>
+        <legend>Please select your preferred contact method:</legend>
+        <div>
+          <input type="radio" id="contactChoice1" name="contact" value="email" />
+          <label for="contactChoice1">Email</label>
+
+          <input type="radio" id="contactChoice2" name="contact" value="phone" />
+          <label for="contactChoice2">Phone</label>
+
+          <input type="radio" id="contactChoice3" name="contact" value="mail" />
+          <label for="contactChoice3">Mail</label>
+        </div>
+        <div>
+          <button type="submit">Submit</button>
+        </div>
+      </fieldset>
+    </form>
+
+    <br />
+
+    <!-- Fieldset: The Field Set Element -->
+
+    <form>
+      <fieldset>
+        <legend>Choose your favorite monster</legend>
+
+        <input type="radio" id="kraken" name="monster" value="K" />
+        <label for="kraken">Kraken</label><br />
+
+        <input type="radio" id="sasquatch" name="monster" value="S" />
+        <label for="sasquatch">Sasquatch</label><br />
+
+        <input type="radio" id="mothman" name="monster" value="M" />
+        <label for="mothman">Mothman</label>
+      </fieldset>
+    </form>
+
+    <!-- Simple FieldSet -->
+    <form action="#">
+      <fieldset>
+        <legend>Do you agree?</legend>
+        <input type="checkbox" id="chbx" name="agree" value="Yes!" />
+        <label for="chbx">I agree</label>
+      </fieldset>
+    </form>
+
+    <!-- Disabled Form -->
+
+    <form action="#">
+      <fieldset disabled>
+        <legend>Disabled login fieldset</legend>
+        <div>
+          <label for="name">Name: </label>
+          <input type="text" id="name" value="Chris" />
+        </div>
+        <div>
+          <label for="pwd">Archetype: </label>
+          <input type="password" id="pwd" value="Wookie" />
+        </div>
+      </fieldset>
+    </form>
+  </body>
+</html>
