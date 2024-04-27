@@ -1,0 +1,74 @@
+Contoh Penggunaan CSS
+
+h1 {
+  color: green;
+}
+ 
+p {
+  font-size: small;
+  font-family: sans-serif;
+}
+
+h1 = Selector
+
+{color:green} = Declaration
+color = Property
+green = Value
+
+p = Selector 
+{
+    font-size:small;
+    font-family:sans-serif;
+}
+
+merupakan Declaration Block (Untuk menuliskan multiple Declaration dalam selector)
+
+APA ITU SELECTOR?
+<h1></h1> dan <p></p> merupakan selector
+
+APA ITU Declaration?
+Deklarasi merupakan nilai di dalam dari selector
+Bagian deklarasi terdiri dari pasangan properti dengan nilainya. Kita bisa menetapkan lebih dari satu deklarasi pada satu rule; contohnya seperti pada selector p di atas, kita menetapkan lebih dari satu deklarasi pada declaration block.
+
+perhatikan pendeklarasian suatu 
+
+KOMENTAR CSS
+
+/* */
+
+Melampirkan Styling di html 
+
+1. External Style Sheet
+
+Buat file khusus .css
+
+
+2. Embedded Style Sheet
+
+Embedded Style Sheet adalah kumpulan rules yang dituliskan dalam berkas HTML dengan menggunakan elemen <style>. Dengan demikian, CSS rules yang dituliskan hanya dapat dicakup oleh satu berkas HTML. Penulisan rules harus dituliskan dalam elemen <style> dan biasanya ditempatkan dalam <head> pada berkas HTML.
+
+Contoh Embedded
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Judul Dokumen</title>
+
+    <style>
+      h1 {
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Kota Bandung</h1>
+  </body>
+</html>
+
+3. Inline Style
+
+Contoh inline style
+
+<nama-elemen style="color: green">Konten elemen HTML</nama-elemen>
+
+<h1 style="color: green; margin-top: 2em">Kota Bandung</h1>
+
