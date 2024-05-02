@@ -72,3 +72,16 @@ Contoh inline style
 
 <h1 style="color: green; margin-top: 2em">Kota Bandung</h1>
 
+
+
+MENGENAL CSS CONCEPTION
+Konsep CSS
+1. Inheritance
+Inheritance berarti dapat mewarisi properti style "ternetu" dari suatu elemn ke elemen di dalamnya (child-elements)
+
+2. Group Selector
+Menggabungkan selector, contohnya
+
+h2, h3 {
+  color:asdad
+}
