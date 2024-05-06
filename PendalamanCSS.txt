@@ -1,0 +1,791 @@
+Selector Dasar:
+1. Type Selector
+2. Class Selector
+3. ID Selector
+4. Attribute Selector
+5. Universal Selector
+
+==========================================
+- Type Selector 
+Contoh ketika di style.css
+
+rule akan diterapkan pada seluruh elemen target yang ada pada dokumen HTML.
+
+/* Semua elemen span */
+span {
+  color: red;
+}
+
+- Class Selector
+target elemen berdasarkan nilai dari atribut class yang diterapkan pada elemennya. Untuk penulisan selector-nya diawali dengan tanda titik (.) dan dilanjutkan dengan nama class-nya. Contohnya berikut.
+
+.red {
+  color: red;
+}
+
+.skyblue-bg {
+  background-color: skyblue;
+}
+
+.fancy {
+  font-weight: bold;
+  text-shadow: 4px 4px 3px #77f;
+}
+
+CSS Sesuai class yang diberikan
+
+Tidak hanya itu, sebuah elemen juga memungkinkan memiliki banyak nilai class sehingga kita dapat menerapkan lebih dari satu rule atau gabungan rule pada elemen target. Untuk menggunakannya, pada atribut class kita cukup tuliskan nama kelasnya dan dipisahkan dengan spasi untuk tiap nilai kelasnya.
+
+
+Contoh lain dari class selector
+.fancy {
+  font-weight: bold;
+  text-shadow: 4px 4px 3px #77f;
+}
+
+p.fancy {
+  text-shadow: 4px 4px 3px #00c8eb;
+}
+
+jadi ada h1 dan p dengan nama class sama, bisa disamakan beberapa style nya dan juga bisa berubah stylenya
+
+
+==========================================
+
+ID Selector
+ID selector menetapkan target elemen berdasarkan nilai dari atribut id yang diterapkan pada elemennya. Mirip dengan class, atribut id dapat diterapkan pada seluruh elemen HTML dan kebanyakan atribut ini digunakan untuk memberikan sebuah arti pada generic element, seperti <div> dan <span>. Namun, atribut id ini tidak bersifat shareable. Artinya, nilai id harus unik dan digunakan pada satu elemen saja.
+
+ID ini hampir sama dengan class 
+
+Kalau class diawali dengan (.), kalau ID diawali dengan (#), 
+Contoh penggunaanya:
+
+#special {
+  background-color: skyblue;
+}
+
+Styling berarti berlaku pada ID dengan nama special
+
+ID hanya bisa dipakai di satu div/span saja, kalau mau di styling ke banyak elemen pakai Class saja
+
+===============================================================
+Attribute Selector
+
+Attribute selector merupakan cara menetapkan target elemen berdasarkan sebuah atribut yang digunakan atau bahkan bisa lebih spesifik dengan nilainya.
+
+Syntax	Description
+[attr]
+
+Menargetkan elemen yang menerapkan atribut attr.
+
+[attr=value]
+
+Menargetkan elemen yang menerapkan atribut attr dengan nilai value.
+
+[attr~=value]
+
+Menargetkan elemen yang menerapkan atribut attr dan salah satu nilainya adalah value.
+
+[attr^=value]
+
+Menargetkan elemen yang menerapkan atribut attr dan nilainya diawali dengan nilai value.
+
+[attr$=value]
+
+Menargetkan elemen yang menerapkan atribut attr dan nilainya diakhiri dengan value.
+
+[attr*=value]
+
+Menargetkan elemen yang menerapkan atribut attr dan nilainya mengandung value.
+
+===============================================================
+
+Universal Selector
+
+Universal selector digunakan untuk diterapkan pada seluruh elemen. Namun, selector ini juga bisa secara spesifik menargetkan sebuah elemen dengan menggabungkannya bersama selector yang lain.
+
+/* Menargetkan seluruh tipe elemen */
+* {
+  color: green;
+}
+
+/* Menargetkan seluruh tipe elemen yang mengandung nilai "en" pada atribut lang */
+*[lang^='en'] {
+  font-style: italic;
+}
+
+/* Menargetkan seluruh tipe elemen yang memiliki nilai "warning" pada atribut class */
+*.warning {
+  color: red;
+}
+
+/* Menargetkan seluruh tipe elemen yang memiliki nilai "content" pada atribut id */
+*#content {
+  border: 1px solid blue;
+  padding: 20px;
+}
+
+
+===============================================================
+
+Combinators: Adjacent Sibling Selector dan General Sibling Selector
+
+Ada 4 Kombinator yang bisa digunakan:
+1. Adjacent Sibling Selector
+2. General Sibling Selector
+3. Child Selector
+4. Descendant Selector
+
+
+===---====-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+1. Adjacent Sibling Selector
+
+Adjacent Sibling Selector menggabungkan dua buah basic selector dengan menggunakan tanda + di antara keduanya. 
+Contohnya:
+
+img + p {
+  color: green;
+}
+
+Syaratnya adalah harus dalam induk yang sama.
+
+Contoh dari Adjacent Sibling Selecctor
+/* Rule akan diterapkan pada elemen paragraf yang berada tepat setelah elemen img */
+img + p {
+  color: green;
+}
+
+Syaratnya setelah img ada p, maka akan berlaku begitu saja tidak dengan p sebelumnya atau sesudah p p nya wkwkwkw
+
+
+===-=-===================-=-===================-=-=============
+
+2. General Sibling Selector (-)
+
+Mirip seperti Adjacent Sibling Selector, tetapi rules akan diterapkan pada seluruh elemen kedua yang berada setelah elemen pertama selama masih memiliki induk yang sama, walaupun posisi dari elemen kedua tidak berada tepat setelahnya.
+
+Contoh 
+img ~ p {
+  color: green;
+}
+
+warna greenn bakal berlaku setelah img dan yang merupakan paragraf, tetapi tetap harus didalam satu body. Kalau p setelah p nya itu dibungkus div, jadi gabisa berubah warna jadi ijo heheheh
+
+
+==============================================================
+
+3. Child Selector(>)
+
+Child Selector menggabungkan dua buah basic selector dengan menggunakan tanda greater than (>) diantara basic selectornya
+
+div > p {
+    background-color: yellow;
+
+}
+
+child itu misal dibungkus div ataupun span maka yang kepakai cuma yang ada di div aja, kalau misl di dalam div dibungkus sama elemen lain kayak <section> </section> itu ga berlaku
+
+===============================================================
+
+4. Descendant Color (Space)
+
+Descendant Selector mirip seperti child selector, tetapi hierarkinya lebih luas karena rule akan diterapkan pada seluruh elemen yang menjadi turunannya walaupun secara tidak langsung. Basic selector pertama yang dituliskan pada selector ini menjadi induknya dan basic selector yang kedua akan menerapkan rule. 
+
+div p{
+    background-color: yellow;
+}
+
+nah, ini bakal berlaku kepada semua yang ada didalam div walaupun dibungkus sama elemen lain, cuman kalau diluar div engga dong wkwkkwk. 
+
+============================================================
+
+5. Pseudo Selector 
+
+Terdapat 2 pseudo yang bisa dipake = Pseudo-Class dan Pseudo-element
+
+Selector ini menargetkan elemen pada bagian yang “tidak terlihat”, seperti sifat pada elemen sehingga untuk menetapkannya tidak bisa menggunakan selector biasa. Salah satu contoh yang paling sering kita terapkan adalah :hover, pseudo selector tersebut kita gunakan untuk menetapkan rule ketika cursor diarahkan ke target elemen.
+
+contoh selector 
+a:hover {
+    color:blue;
+}
+
+/* rule akan diterapkan pada sebuah tautan yang belum pernah dikunjungi */
+a:link {
+   color: red;
+}
+
+/* rule akan diterapkan pada sebuah tautan yang sudah pernah dikunjungi */
+a:visited {
+   color: green;
+}
+
+/* rule akan diterapkan pada sebuah tautan ketika diarahkan dengan kursor */
+a:hover {
+   color: pink;
+}
+
+/* rule akan diterapkan pada sebuah tautan ketika ditekan */
+a:active {
+   color:orange;
+}
+
+contoh file html nya kayak gini dibawah
+
+    <p>
+      Dapatkan pekerjaan impian di 
+      <a target="_blank" href="https://jobs.dicoding.com/">
+        Dicoding Jobs
+      </a>.
+    </p>
+
+
+jadi a: itu ada 4 brow = 
+
+a:hover = pas lagi mouse hover
+a:visited = pas udah pernah di click atau 
+a:link = kalau belum pernah ditekan 
+a:active = kalau pas ditekan atau di klik
+
+
+Nahh yang pseudo kedua ini Pseudo elemen selector
+
+======= Pseudo Selector ====================================
+
+Selector ini biasa digunakan ketika kita ingin menambahkan konten tepat sebelum dan setelah sebuah elemen paragraf. Yup, kita tidak perlu menuliskan elemen/konten baru pada berkas HTML untuk menambahkan konten. Namun, kita dapat memanfaatkan pseudo-element untuk melakukannya. Pseudo-element yang dimaksud adalah ::before dan ::after.
+
+Contohnya, kita ingin menambahkan tanda kutip sebelum dan sesudah elemen blockquote sehingga kita cukup menuliskannya seperti berikut.
+
+contohnya pakein dulu elemen <blockquote></blockquote> terus tambahjin di css nya :
+
+blockquote::before,
+blockquote::after {
+    content: "";
+    //baru ataur mau diapain 
+    font-size: 24px;
+    font-style: italic;
+    font-weight: bold
+}
+
+nah pas didalem blockquote nya berarti bisa diterapin apa yang udah di styling
+
+nah gacuma itu misal mau bikin 1 huruf di styling juga bisa pake pseudo selector, contohnya begini 
+
+/* Rule styling akan diterapkan pada karakter pertama di sebuah paragraf */
+p::first-letter {
+  font-size: 32px;
+  font-weight: bold;
+  color: saddlebrown;
+}
+
+jadi ngambil first-letter bakal ngambil huruf pertama di paragraf (p), nah abis itu baru bisa di styling mau size, weight dan color nya apa
+
+Kalau mau lebih lanjut cari tau tentang Pseudo Elements di MDN ataupun baca baca dimana aja 
+
+
+==========================================
+===== Materi baru Formatting Text ========
+
+Jika kita ingin menetapkan styling pada tampilan teks itu sendiri, gunakanlah properti font. Contohnya, properti font dapat mengatur tipe font, ukuran, ketebalan, dan lainnya. Sementara itu, properti teks digunakan untuk mendukung hal lainnya dalam menampilkan teks seperti menetapkan text alignment, dekorasi, spacing, dan masih banyak lagi. Sebab dua hal ini dipisah, mari kita membahasnya satu per satu.
+
+Font Styling: Font Family dan Font Size 
+
+Ada 6 Font Styling 
+
+1. Font-Family = Buat netepin jenis font 
+2. Font-Size = Menentukan ukuran pada text
+3. Font-Weight = Menentukan ketebalan pada text
+4. Font-Style = Menetapkan Styling yang diterapkan pada text
+5. Font-Variant = Menentukan teks untuk menggunakan gaya small caps (huruf kapital kecil)
+6. Font = Sebagai Shorthand dari properti font yang ada
+
+=============================================================================================
+
+1. Font Family
+Font properties ini untuk mengubah standar font yang ditampilkan pada browser dengan menggunakan font-family pada elemen body.
+
+Contoh nya 
+
+body{
+  font-family: Sans-Serif;
+}
+
+aturan penulisannya yaitu:
+
+p {font-family: Arial, Verdana, Sans-Serif} = nama properti, value1,2,3
+
+span{font-family: "Open Sans", Verdana, Sans Serif}
+
+Aturannya yaitu
+- Pake Koma 
+- Pake Kapital awal
+- Pake "" kalau ada spasi di nama fontnnya
+
+pake 3 alternatif font buat jaga jaga kalau browser tidak support
+
+Ada beberapa jenis font yang ada untuk fallback mechanism
+
+Serif:
+jenis font yang memiliki runcing pada garis akhir karakternya. Times New Roman merupakan salah satu jenis serif font.
+
+Sans-serif:
+jenis font yang tidak meruncing pada garis akhir karakternya. Contohnya, “Open Sans”, “Fira Sans” dan lainnya.
+
+Monospace:
+jenis font yang memiliki nilai lebar tiap karakternya sama. Consolas merupakan salah satu jenisnya.
+
+Cursive:
+jenis font yang tampak seperti handwriting atau hasil tulisan tangan.
+
+Fantasy:
+Jenis font yang merepresentasikan karakteristik yang menyenangkan.
+
+System-ui:
+jika menerapkan nilai ini maka font yang diterapkan akan sama seperti font yang digunakan pada sistem operasi kita.
+
+Math:
+jenis font yang digunakan untuk penulisan rumus-rumus matematika.
+
+Emoji:
+jenis font yang digunakan untuk menampilkan emoji.
+Fangsong: jenis font yang menampilkan gaya penulisan Chinese.
+
+=-=-=--=-==-=-=--=-==--==--==--=-=-=-==-=-=-=-=-=--=-=-=-=-=-==--=-=-=-==--==--=-==-=-=-=-=-=-
+
+@font-face 
+merupakan cara agar font yang unik dapat ditampilkan, caranya adalah
+@font-face{
+  font-family: "Dicoding Font";
+  src: url('FILE.FONT.TTF');
+}
+
+Abis deklarasi font-face baru bisa dipake dari font facenya jadi deklarasi dulu, contohnya:
+
+p{
+  font-family: "Dicodinig Font";
+}
+
+===-=-=-=-=-=-=-=-=-=--==-=-=-=-====================================---------------------------
+
+2. Font-Size
+
+Untuk menetapkan ukuran font, kita perlu menerapkan properti font-size dengan menetapkan nilai dari properti ini dengan menuliskan langsung nilai dan satuannya.
+
+h1 {
+  font-size: 1.5 em;
+}
+
+Biasanya ukuran font pakai satuan (em) jangan lupa dikasih spasi
+
+Buat netapin font ada 2 cara, yaitu
+
+- Relative Unit
+Satuan yang niliainya tergantung suatu hal
+contohnya = ukuran viewport, induk elemen, ukuran teks standar
+- Absolute Unit
+Satuan yang nilainya telah ditentukan atau digunakan dalam dunia nyata
+
+
+CONTOH RELATIVE UNIT
+
+em = font size
+(contohnya, 2em berarti 2 kali lebih besar dari ukuran font seharusnya).
+
+ex = font height (tinggi font)
+satuan relatif thdp tinggi, sangat jarang digunakan
+
+rem = font size (ukuran font)
+rem itu satuan relatif terhadap ukuran font dari root element REM merujuk pada ukuran font dari elemen root (biasanya elemen <html>)
+
+ch = font width (lebar font)
+satuan relatif terhadap lebar dari karaket "0" nol.
+
+vw = viewport width
+satuan yang bisa user lihat kebanyakan yaitu satuan relatif terhadap 1% lebar viewport. Contohnya 1vw = 1% dari lebar viewport
+
+vh = viewport height
+sama kayak vw, kalau vh ini berdasarkan tinggi dari viewport, contohnya 1vh = 1% dari tinggi viewport
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Contoh Absolute Unit
+
+px = buat netapin nilai font berdasarkan ukuran pixel
+pt = menetapkan nilai font berdasarkan points (1/72 inch di CSS2.1)
+pc = menetapkan nilai font berdasarkan picas (1 pica = 12 point)
+mm = menetapkan nilai font berdasarkan milimeters
+cm = berdasarkan centimeters
+in = berdasarkan inch
+
+tidak hanya itu kita juga bisa pake persentase %
+
+body{
+  font-size: 16px;
+}
+
+h1 {
+  font-size: 150%;
+}
+
+arti dari 150% adalah 150% dari 16px diatasnya, jadi hasilnya 24px
+
+Jadi h1 punya font size sebesar 24px, dan bodynya 16px
+
+kita juga bisa pake kata kunci kayak 
+xx-small, x-small, small, medium, large, x-large, dan xx-large
+
+
+===============================================================================================
+
+Sekarang ada namanya 
+
+Font Styling: Font Weight, Font Style, Font Variant, dan short handwriting
+
+3. Font Weight 
+
+Nilai dari properti ini dapat ditentukan dengan menggunakan numeric values (100 sampai 900) atau dengan menggunakan descriptive terms (normal, bold, bolder, dan lighter).
+
+Nilai dari FW itu dari 100-900, atau bisa juga pakai normal, bold, bolder, lighter 
+
+contoh penggunaannya 
+
+.normal {
+  font-weight: normal;
+}
+
+---------------------------------------------------------------------------------------------
+
+4. Font Style
+
+ada 3 yaitu normal, vertical dan oblique
+
+.normal {
+  font-style: normal;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.oblique {
+  font-style: oblique;
+}
+
+Properti font-style dapat diaplikasikan ke seluruh elemen yang ada di HTML dan nilainya dapat diturunkan pada elemen turunannya.
+
+---------------------------------------------------------------------------------------------
+
+5. Font-Variant
+
+Terdapat fitur small caps. Fitur ini dapat membuat teks menjadi kapital tetapi dituliskan secara kecil dan merapat seperti berikut.
+
+h1 {
+  font-variant: small-caps;
+}
+
+----------------------------------------------------------------------------------------------
+
+6. Shorthand
+
+Dengan menggunakan properti font, kita dapat menuliskan beberapa properti hanya dalam satu properti pada satu rule.
+
+aturannya yaitu:
+
+target {font: style weight variant size font-family}
+
+urutan dimulai dari yang terpenting contohnya:
+font size sama font family sifatnya wajib 
+
+p {
+  font: 1em sans-serif;
+}
+
+
+-==-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=--=--==-=-=-=-=-=--==-=----------------------------------------------------------------------------------------------------------=-'
+
+TEXT STYLING: LINE HEIGHT, TEXT INDENT, DAN TEXT ALIGNMENT
+
+1. Line Height 
+
+digunakan untuk ngatur jarak minimal dari garis daasar ke garis dasar pas maunampilin teks pada halaman
+
+contoh implementasi nya :
+
+.In2{
+  line-height: 2;
+}
+
+.ln200 {
+  line-height: 200%;
+}
+
+.ln2em {
+  line-height: 2em;
+}
+
+berarti jarak antar kata atau kalimat itu 2 kali lipat dari tinggi tulisan atau font, contohnya ukuran standar 16 piksel, jadi kalau line heightnya 2 berarti 32 pixel
+
+----------------------------------------------------===========================================
+
+2. Text Indent
+
+text indent merupakan awalan kayak paragraf, bisa diatur berdasarkan presentase 
+
+================================================-----------------------------------------------
+
+3. Text alignment
+
+text-align: left
+Membuat perataan teks pada ujung kiri.
+
+text-align: right
+Membuat perataan teks pada ujung kanan.
+
+text-align: center
+Membuat perataan teks secara menengah.
+
+text-align: justify
+Membuat perataan teks yang setara pada ujung kiri dan kanannya.
+
+==-=-=-=-=---------------------------------=====================================----------------------------===========
+
+TEXT STYLING: Text Decoration, Text Transform, Word Letter Spacing, dan Text shadow
+
+Ada 4 styling lagi yang akan dibahas, yaitu:
+
+1. Text Decoration
+
+text-decoration: underline = kasih garis bawah pada text
+text-decoration: overline = kasih garis atas pada text
+text-decoration: line-through = kasih efek tulisan dicoret (strikethrough)
+text-decoration: none = ngilangin dekorasi teks yang ada, bisa juga buat link
+
+contohnya: 
+
+.decoration-none {
+  text-decoration: none;
+}
+
+----------------------------------------------------------------------------------------------
+
+2. Text Transform
+
+transformasi text, contohnya capitalize, lowercase, uppercase.
+
+text-transform: none
+text-transform: capitalize Huruf awalan kayak judul
+text-transform: lowercase
+text-transform: uppercase
+
+contohnya:
+main {
+  font-family: sans-serif;
+}
+
+.transform-none {
+  text-transform: none;
+}
+
+.transform-capitalize {
+  text-transform: capitalize;
+}
+
+================================------------------------======================================
+
+3. Word and Letter Spacing
+
+Properti ini digunakan untuk ngatur spasi atau jarak teks, letter spacing mengatur antar huruf, word spacing mengatur antar kata
+
+main {
+  font-family: sans-serif;
+}
+
+.letter-spacing {
+  letter-spacing: 4px;
+}
+
+.word-spacing {
+  word-spacing: 1.5em;
+}
+
+=============================================================================================
+
+
+4. Text Shadow
+
+Pada CSS, kita dapat gunakan properti text-shadow untuk membuat bayangan pada teks (atau biasa disebut drop shadow).
+
+Nilai pertama
+Menunjukkan sbeerapa jauh ke kiri atau kanan (horizontal) bayangan harus ditampakkan
+
+Nilai kedua
+Menunjukkan jarak ke atas atau ke bawah (vertical) bayangan harus ditampakkan
+
+Nilai ketiga (opsional)
+Menunjukkan tingkar keburemann yang harus diterapkan pada bayangan
+
+Nilai keempat
+Menentukan warna yang digunakan pada bayangan
+
+
+Google Fonts hanya dapat digunakan ketika komputer dalam keadaan online. Jika kita sedang mengembangkan website dalam keadaan offline, sebaiknya gunakan pendekatan @font-face.
+Sedikit fun-fact: platform belajar dicoding.com juga menggunakan custom font untuk menampilkan sebagian kontennya (teks). Konten tersebut ditampilkan menggunakan tipe font bernama Quicksand.
+
+================================================================
+
+PEWARNAAN
+
+1. Menetapkan nilai dengan cara numeric value
+
+/* Warna hijau menggunakan format RGB */
+color: rgb(78,231,23);
+ 
+/* Warna hijau Menggunakan format HEX */
+color: #4ee717;
+
+
+-=-=-=-=-=-==-=-===-=-==-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+2. PRE DEFINED COLOR NAME
+
+Selain format angka, bisa sebuah  kata langsung
+
+color: black;
+color: blue;
+color: white;
+
+
+==========================================================
+
+Warna untuk Teks dan Latar Belakang
+
+1. Text Color
+
+p { color: gray; }
+p { color: #666666; }
+p { color: #666; }
+p { color: rgb(102,102,102); }
+
+Contoh penggunaannya
+body {
+  color: steelblue;
+}
+
+2. Background Color
+
+background-color dapat mengatur warna untuk background dari kotak tersebut. Jadi, untuk memastikan website kita memiliki tampilan background putih, kita dapat terapkan nilai background-color: white; pada elemen body.
+
+Contoh penggunaan background color
+
+body {
+  font-family: sans-serif;
+}
+
+main {
+  background-color: rgb(235, 255, 213);
+  padding: 20px 15px;
+}
+
+main > h2 {
+  background-color: #4c5450;
+  padding: 15px;
+  color: white;
+}
+
+main > h3 {
+  background-color: #60d0a8;
+  padding: 15px;
+  color: white;
+}
+
+main > p {
+  background-color: hsl(56, 62%, 85%);
+  padding: 20px;
+}
+
+============================================================================================
+
+1. OPACITY
+
+“Apa perbedaan antara transparan dan opacity?” Jawabannya, transparan adalah seberapa besar tingkat tembus pandang atau tak terlihatnya suatu objek, sedangkan opacity adalah seberapa besar tingkat terlihat suatu objek. Semakin besar tingkat transparansi suatu objek, semakin tak terlihat objek tersebut. Namun, semakin besar tingkat opacity suatu objek, semakin terlihat objek tersebut (solid).
+
+Contoh penggunaan dari opacity
+
+p {
+  background-color: red;
+}
+
+p.opacity-50 {
+  opacity: 50%;
+}
+
+p.opacity-100 {
+  opacity: 100%;
+}
+
+-=-=-==-=-=--==--=-=-=-=-==-=--==--==--=-==-=--=--==-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+2. Opacity pada warna
+
+CSS memiliki fitur bernama opacity yang dapat ditetapkan dalam warna. Ini merupakan komponen keempat setelah red, blue, dan green. Biasanya, ia disebut sebagai alpha channel. Untuk melakukannya, kita bisa menggunakan format warna RGBA, HSLA, dan Hex.
+
+============================================================================================
+
+BOX MODEL 
+
+Setiap elemen ditampilkan seperti sebuah boxes atau kotak. Setiap elemen yang dibuat pada HTML akan menciptakan sebuah kotak untuk menampung kontennya. Layaknya bentuk kotak pada umumnya, ada beberapa nilai atau komponen padanya
+
+1. Lebar dan tinggi pada kotak (konten)
+2. Ruang kosong antara konten dengan border (padding)
+3. Garis tepi (border)
+4. Jarak dari elemen lain (margin)
+
+kita dapat mengatur hal hal tersebut
+
+--------------------------------------------------------------------------------------------
+
+BOX Elements
+
+* {
+  border: 1px solid red;
+}
+
+Content = Merupakan inti dari kotak element itu sendiri atau tulisan yang ada
+
+Padding = Jarak antara border elemen dengan konten yang ditampilkan
+
+Border =  garis yang mencakup konten beserta padding. Penerapan border pada elemen adalah opsional.
+
+Margin = margin merupakan area jarak di luar border. Pada ilustrasi di atas, margin ditunjukkan dengan warna merah muda.
+
+Edge of elements = Batas dari suatu elemen, ini mencakup semua ada margin, border, padding, dan konten. 
+
+==============================================================================================
+
+Box Model : Box Dimensionss
+
+Konsep pertama yang akan kita bahas pada box model adalah dimensi dari elemen.
+
+1. Dimension
+
+kita dapat mengatur nilai dimensi dari box tersebut dengan properti width dan height. 
+
+Pada contoh file boxmodel css pertama, kita dapat melihat elemen <div> memiliki dimensi elemen dengan lebar 300px dan tinggi 300px. Di dalamnya terdapat elemen <p> yang memiliki ukuran elemen 75% dari lebar dan tinggi elemen induknya. Dengan demikian, elemen <p> memiliki ukuran 225px untuk panjang dan lebarnya.
+
+
+2. Limiting Dimension
+
+min-width: menetapkan nilai lebar minimal yang harus dimiliki elemen.
+max-width: menetapkan nilai lebar maksimal yang harus dimiliki elemen.
+
+3. Overflowing content
+
+Dimensi box yang dihasilkan elemen selalu cukup buat nampung konten, hal ini tidak berlaku jika kita tetapkan secara manual panjang dan lebarnya
+
+
+div{
+  height: 200px;
+  width: 200px;
+}

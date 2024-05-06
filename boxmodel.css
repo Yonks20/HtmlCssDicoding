@@ -1,0 +1,27 @@
+/* ini contoh dari dimension yang awal */
+
+/* .box {
+  height: 300px;
+  width: 300px;
+  background-color: #11c5c6;
+}
+
+p {
+  height: 75%;
+  width: 75%;
+  background-color: #fbdd1c;
+} */
+
+/* ini contoh dari limiting dimension*/
+.content {
+  max-width: 800px;
+  height: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: deepskyblue;
+}
+
+p {
+  font-size: 1.5em;
+  font-weight: bold;
+}

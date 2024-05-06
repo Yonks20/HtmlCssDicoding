@@ -7,10 +7,11 @@
 }
 
 body {
-  font-family: sans-serif;
+  font-family: "Quicksand", sans-serif;
 }
 
-h2, h3 {
+h2,
+h3 {
   color: #00a2c6;
 }
 /* Ini namanya group selector, jadi selector digabungkan karena isinya sama */
@@ -19,4 +20,22 @@ footer {
   padding: 20px;
   color: white;
   background-color: #00a2c6;
+  text-align: center;
+  font-weight: bold;
+}
+
+nav a {
+  font-size: 18px;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+/* Kalau pake hover harus dempet */
+nav a:hover {
+  font-weight: bold;
+}
+
+/* Karena class jadi pakai titik */
+.profile header {
+  text-align: center;
 }
