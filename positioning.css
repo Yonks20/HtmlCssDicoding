@@ -146,7 +146,7 @@ img {
  */
 
 /* Ini contoh pakai overflow yang hasilnya sama pakai clear property */
-.container {
+/* .container {
   width: 800px;
   border: 4px solid black;
   overflow: auto;
@@ -155,4 +155,4 @@ img {
 img {
   float: left;
   margin: 10px;
-}
+} */

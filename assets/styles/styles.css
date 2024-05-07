@@ -1,10 +1,10 @@
-.shadowbox {
-  width: 15em;
-  border: 1px solid #333;
-  box-shadow: 8px 8px 5px #444;
-  padding: 8px 12px;
-  background-image: linear-gradient(180deg, #fff, #ddd 40%, #ccc);
+* {
+  box-sizing: border-box;
 }
+
+/* Ups! Letak elemen <aside> berada di bawah #content sekarang. Hal ini karena kita menambahkan padding pada <aside> sehingga lebar elemen sudah bukan 25% lagi.
+
+Untuk mengatasinya, kita bisa ubah tipe pengukuran untuk dimensi kotaknya (elemen). Masih ingat materi tentang box-sizing, kan? Dengan menerapkan nilai border-box pada properti ini, kita dapat menentukan dimensi kotak dengan tepat, tanpa dipengaruhi oleh padding dan border. */
 
 body {
   font-family: "Quicksand", sans-serif;
@@ -94,12 +94,19 @@ nav li {
 nav {
   background-color: #00a2c6;
   padding: 5px;
+
+  /* Kalau mau jadiin sticky nav nya  */
+  /* Nilai top: 0 diperlukan agar elemen navigasi selalu berada di atas jendela browser saat user melakukan scrolling. */
+  position: sticky;
+  top: 0;
 }
 
 /* tambahkan jarak pada main */
 
 main {
   padding: 20px;
+  overflow: auto;
+  /* ini yang buat footernya turun jadi kebawah */
 }
 
 #content {
@@ -109,4 +116,22 @@ main {
 
 aside {
   float: right;
+  width: 25%;
+  padding-left: 20px;
+}
+
+/* Nambahin header biar jadi sticky */
+
+header {
+  display: inline;
+}
+
+/* Menambahkan media query untuk tampilan android */
+
+@media screen and (max-width: 1000px) {
+  #content,
+  aside {
+    width: 100%;
+    padding: 0;
+  }
 }

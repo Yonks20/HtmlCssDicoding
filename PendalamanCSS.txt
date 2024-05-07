@@ -963,3 +963,12 @@ Ia merupakan absolute position. Namun, posisinya selalu relatif pada jendela bro
 Static bisa geser tapi mempengaruhi disekitarnya
 Relative kalau di 3d dia ga sejajar jadi bebas dimana saja 
 a akan berpengaruh pada elemen yang menerapkan non-static flow, yaitu elemen yang menerapkan nilai relative, absolute, dan fixed pada properti position.
+
+
+==============================================================--=-=============================================
+------------------------------------------------------------------------------------------------------------
+==============================================================================================================
+
+
+Spesific Style dengan Media Query
+
