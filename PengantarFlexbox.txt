@@ -1,0 +1,44 @@
+Flexible box layout adalah model layout satu dimensi guna menyusun elemen-elemen (flex items) dalam posisi rows atau columns. Hal ini membuat flexbox disebut dengan direction-agnostic atau mengatur tata letak di banyak arah. Hal menarik dari flexbox adalah ia menawarkan penyusunan layout dengan fleksibel karena flex container atau flexbox dapat mengatur dimensi setiap flex-items (child element) sehingga layout yang diinginkan dapat tercapai dengan mudah.
+
+Flex container memperluas flex items untuk mengisi ruang kosong atau menciutkannya sehingga menghindari overflow (dimensi child element yang keluar dari parent element-nya). Dengan hadirnya flexbox, perancangan layout dalam skala yang kecil dapat dilakukan dengan mudah pada halaman web.
+
+========================================================================
+
+
+Flexbox dapat melakukan banyak hal dengan melibatkan berbagai properti pendukung. Beberapa di antaranya digunakan oleh flex container dan sebagian lainnya digunakan oleh flex items.
+
+Flex container adalah parent element dari seluruh flex items, sedangkan flex items adalah elemen yang secara langsung merupakan child dari parent element.
+
+
+Cross start | Cross end bisa diatur dengan 
+- align-items
+- align-self
+- align-content
+
+
+-=-=-=--=-=-=-==--=-=-=-=-=-=-=-=-=-=-=-=-=-==--=-=-=
+
+Properti pada flex container
+
+- display
+Mengatur sifar elemen dengan value block daninline
+
+contoh penggunaanya ya tinggal 
+
+.container {
+    display: fex
+}
+
+
+Adapun value dari flex-direction 
+
+1. Row = flex akan horixontal
+2. Row-reverse = flex kebalik dari kanan dan kiri 
+3. Column = flex yang disusun dari atas sampe bawah
+4. Colimn Reverse = flex items akan disusun secara vertikal, tetapi dengan arah teralik
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Kata penting = 
+
+Flex direction
+Flex Wrap
+

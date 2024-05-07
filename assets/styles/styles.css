@@ -16,6 +16,7 @@ h2,
 h3 {
   color: #00a2c6;
 }
+
 /* Ini namanya group selector, jadi selector digabungkan karena isinya sama */
 
 footer {
@@ -120,15 +121,13 @@ aside {
   padding-left: 20px;
 }
 
-/* Nambahin header biar jadi sticky */
-
+/* buat header dari display online */
 header {
   display: inline;
 }
 
-/* Menambahkan media query untuk tampilan android */
-
 @media screen and (max-width: 1000px) {
+
   #content,
   aside {
     width: 100%;
