@@ -36,6 +36,42 @@ Adapun value dari flex-direction
 2. Row-reverse = flex kebalik dari kanan dan kiri 
 3. Column = flex yang disusun dari atas sampe bawah
 4. Colimn Reverse = flex items akan disusun secara vertikal, tetapi dengan arah teralik
+
+FLEX WRAP
+Berikut adalah penjelasan setiap value dari properti flex-wrap.
+
+nowrap
+seluruh flex items hanya akan ditempatkan dalam satu baris meskipun sangat banyak jumlahnya.
+
+wrap:
+nilai ini menyebabkan flex items akan diletakkan ke baris yang baru (berikutnya) sehingga menjadi multiple lines.
+
+wrap-reverse: 
+meskipun mirip dengan wrap, nilai ini akan menyebabkan beberapa flex items ditempatkan dengan menambahkan baris sebelumnya.
+
+
+================================================================
+
+justify content
+flex-start = child dimulai dari start-end (kiri ke kanan)
+
+flex-end = child dimulai dari end-start (kanan ke kiri)
+
+center = child element di letakan di tengah parent child
+
+space-between = Space between ini ibarat justify di word
+
+space-around = setiap child element akan memiliki panjang celah yang sama di sisi horizontal
+
+space-evently = setiap child element akan memiliki jarak yang setara dari tepi start ke end
+
+
+.container {
+  display: flex;
+  align-items: stretch | flex-start | flex-end | center | baseline;
+}
+
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Kata penting = 
 
