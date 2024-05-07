@@ -940,3 +940,26 @@ Nilai dan cara kerja dari properti box-shadow mirip seperti text-shadow, yaitu n
 
 
 
+=-=-==--==--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-------------------------------------------==================================
+
+PENERAPAN CARD STYLE PADA ELEMEN ARTICLE
+
+POSITIONING
+
+Positioning Schema
+
+- Normal Flow/Static Flow
+setiap elemen block selalu muncul di bawah dari elemen block sebelumnya. 
+
+- Relative Positioning
+Membuat elemen dapat melakukan perpindahan posisi ke atas, kanan, bawah, ataupun kiri dari posisi semula atau posisi seharusnya elemen tersebut berada.
+
+- Absolute Positioning
+Sama seperti relative, elemen akan dipindahkan keluar dari normal flow sehingga kita dapat memindahkan posisi elemen ke atas, kanan, bawah, ataupun kiri secara leluasa tanpa mengganggu elemen di sekitarnya. Namun, posisinya relatif terhadap jendela browser dan posisinya dapat relatif pada induk elemen selama induk elemen juga berada di luar dari normal flow.
+
+- Fixed Positioning
+Ia merupakan absolute position. Namun, posisinya selalu relatif pada jendela browser, bahkan ketika pengguna melakukan scrolling posisinya akan tetap tampak pada posisinya di layar.
+
+Static bisa geser tapi mempengaruhi disekitarnya
+Relative kalau di 3d dia ga sejajar jadi bebas dimana saja 
+a akan berpengaruh pada elemen yang menerapkan non-static flow, yaitu elemen yang menerapkan nilai relative, absolute, dan fixed pada properti position.
