@@ -78,3 +78,8 @@ Kata penting =
 Flex direction
 Flex Wrap
 
+
+penggunaan gap untuk jarak 
+
+Untuk itu, kita akan menambahkan properti display: flex pada elemen <main> agar menjadi flex container. Selain itu, kita hilangkan juga properti overflow: auto pada selector tersebut sehingga selector main akan menjadi seperti berikut.
+

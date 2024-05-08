@@ -1,0 +1,147 @@
+* {
+  box-sizing: border-box;
+}
+
+/* Ups! Letak elemen <aside> berada di bawah #content sekarang. Hal ini karena kita menambahkan padding pada <aside> sehingga lebar elemen sudah bukan 25% lagi.
+  
+  Untuk mengatasinya, kita bisa ubah tipe pengukuran untuk dimensi kotaknya (elemen). Masih ingat materi tentang box-sizing, kan? Dengan menerapkan nilai border-box pada properti ini, kita dapat menentukan dimensi kotak dengan tepat, tanpa dipengaruhi oleh padding dan border. */
+
+body {
+  font-family: "Quicksand", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+h2,
+h3 {
+  color: #00a2c6;
+}
+
+/* Ini namanya group selector, jadi selector digabungkan karena isinya sama */
+
+footer {
+  padding: 20px;
+  color: white;
+  background-color: #00a2c6;
+  text-align: center;
+  font-weight: bold;
+}
+
+nav a {
+  font-size: 18px;
+  font-weight: 400;
+  text-decoration: none;
+  color: white;
+}
+
+/* Kalau pake hover harus dempet */
+nav a:hover {
+  font-weight: bold;
+}
+
+/* Karena class jadi pakai titik */
+.profile header {
+  text-align: center;
+}
+
+/* Pakai selector .featured images */
+
+.featured-image {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  object-position: center;
+  /* object fit dan position itu tujuannya buat   */
+}
+
+.profile img {
+  width: 200px;
+}
+
+/* Pakai card style agar lebih rapih*/
+
+.card {
+  /* Perbaiki card padding dan margin top */
+
+  box-shadow: 0 4px 8px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 20px;
+}
+
+/* Tambahin jumbotron alias navbar */
+
+.jumbotron {
+  font-size: 20px;
+  padding: 60px;
+  background-color: #00c8eb;
+  text-align: center;
+  color: white;
+}
+
+nav ul {
+  padding-inline: 4rem;
+  display: flex;
+  gap: 2rem;
+}
+
+/* Tambahain nav li buat navbar */
+nav li {
+  list-style-type: none;
+}
+
+/* Tambahin backgroun color di nav */
+nav {
+  background-color: #00a2c6;
+  padding: 5px;
+
+  /* Kalau mau jadiin sticky nav nya  */
+  /* Nilai top: 0 diperlukan agar elemen navigasi selalu berada di atas jendela browser saat user melakukan scrolling. */
+  position: sticky;
+  top: 0;
+}
+
+/* tambahkan jarak pada main */
+
+main {
+  padding: 20px;
+  display: flex;
+  gap: 1.5rem;
+  /* ini yang buat footernya turun jadi kebawah */
+}
+
+#content {
+  flex: 5;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1rem 2rem;
+}
+
+aside {
+  flex: 1;
+}
+
+/* buat header dari display online */
+header {
+  display: inline;
+}
+
+/* Perangkat dengan lebar layar 1200px dan dibawahnya nanti akan berukuran */
+@media screen and (max-width: 1200px) {
+  main {
+    flex-flow: column nowrap;
+  }
+  main aside {
+    align-self: center;
+  }
+}
+
+/* Perangkat dengan lebar layar 768 dan dibawahnya  */
+
+@media screen and (max-width: 768px) {
+  nav ul {
+    justify-content: center;
+  }
+  main aside {
+    align-self: stretch;
+  }
+}
